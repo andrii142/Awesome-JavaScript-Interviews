@@ -25,28 +25,28 @@ A flag on a block or element. Use them to change appearance or behavior.
 Examples
 disabled, highlighted, checked, fixed, size big, color yellow
 
-CSS class is formed as block’s or element’s name plus two dashes: .block--mod or .block\_\_elem--mod and .block--color-black with .block--color-red
+CSS class is formed as block’s or element’s name plus one underline: .block_mod or .block\_\_elem_mod and .block_color-black with .block_color-red
 
 #### Now an example
 
 Let’s say we want to build a card component. The block would be .card. Then any sections within card would be elements. So in this example, we have image, description, button. BEM naming convention connects block and element with two underscores ex. card\_\_image.
 
-Finally, we have two different types of buttons, success and back. We call these modifiers and we connect them with our element with two dashes, for example .card--button--success.
+Finally, we have two different types of buttons, success and back. We call these modifiers and we connect them with our element with one underscore, for example .card_button_success.
 
 [https://medium.com/@dannyhuang_75970/what-is-bem-and-why-you-should-use-it-in-your-project-ab37c6d10b79](https://medium.com/@dannyhuang_75970/what-is-bem-and-why-you-should-use-it-in-your-project-ab37c6d10b79)
 
 #### Another example
 
-We can have a normal button for usual cases, and two more states for different ones. Because we style blocks by class selectors with BEM, we can implement them using any tags we want (button, a or even div). The naming rules tell us to use block--modifier-value syntax.
+We can have a normal button for usual cases, and two more states for different ones. Because we style blocks by class selectors with BEM, we can implement them using any tags we want (button, a or even div). The naming rules tell us to use block_modifier_value syntax.
 
 ```html
 <button class="button">
 	Normal button
 </button>
-<button class="button button--state-success">
+<button class="button button_state_success">
 	Success button
 </button>
-<button class="button button--state-danger">
+<button class="button button_state_danger">
 	Danger button
 </button>
 ```
@@ -62,12 +62,12 @@ And the css
 	background-image: linear-gradient(#EEE, #DDD);
 	font: 700 13px/18px Helvetica, arial;
 }
-.button--state-success {
+.button_state_success {
 	color: #FFF;
 	background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x;
 	border-color: #4A993E;
 }
-.button--state-danger {
+.button_state_danger {
 	color: #900;
 }
 ```
